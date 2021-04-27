@@ -23,7 +23,7 @@ public class UserAction {
 		String userid = request.getParameter("userid");
 		String password = request.getParameter("password");
 
-		if ("admin".equalsIgnoreCase(userid) && "admin".equals(password)) {
+		if ("admin".equalsIgnoreCase(userid) && "admin".equalsIgnoreCase(password)) {
 			retMsg = "success";
 		} else {
 			retMsg = "fail";
