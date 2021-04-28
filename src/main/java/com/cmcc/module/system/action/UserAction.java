@@ -1,4 +1,4 @@
-package com.cmcc.action;
+package com.cmcc.module.system.action;
 
 import java.io.IOException;
 
@@ -14,7 +14,7 @@ public class UserAction {
 	HttpServletResponse response = ServletActionContext.getResponse();
 
 	public void finish() throws IOException {
-		response.setContentType("text/text;charset=utf-8");
+		response.setContentType("text/html;charset=utf-8");
 		response.setCharacterEncoding("UTF-8");
 		response.getWriter().print(retMsg);
 	}

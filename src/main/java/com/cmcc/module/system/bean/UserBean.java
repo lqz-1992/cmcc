@@ -1,4 +1,4 @@
-package com.cmcc.bean;
+package com.cmcc.module.system.bean;
 
 public class UserBean {
 	private String userid;
