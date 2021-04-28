@@ -4,13 +4,7 @@
 
 <struts>
 
-    <package name="basicstruts2" extends="struts-default">
-        <action name="index">
-	        <result>/index.jsp</result>
-	    </action>
-    </package>
-	
-	<package name="system" namespace="/" extends="struts-default">
+    <package name="system" namespace="/" extends="struts-default">
 	    <action name="*_*!*" class="com.cmcc.module.{1}.action.{2}Action" method="{3}">
 		</action>
 	</package>
