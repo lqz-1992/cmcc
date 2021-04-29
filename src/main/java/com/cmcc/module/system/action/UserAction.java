@@ -17,7 +17,7 @@ public class UserAction extends BaseAction {
         if (user != null) {
 			retMsg = user.getUser_name();
 		} else {
-			retMsg = "’À∫≈≤ª¥Ê‘⁄£°";
+			retMsg = "";
 		}
 		finish();
 	}
