@@ -16,7 +16,7 @@
         
         <init-param>
             <param-name>cors.allowOrigin</param-name>
-            <param-value>http://localhost:8081, http://localhost:8082</param-value>
+            <param-value>http://localhost:8080, http://localhost:8081, http://localhost:8082</param-value>
         </init-param>
         
         <init-param>

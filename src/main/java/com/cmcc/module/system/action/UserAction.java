@@ -15,9 +15,9 @@ public class UserAction extends BaseAction {
 			user = new UserDaoImpl().getUser(userid, password);
 		}
         if (user != null) {
-			retMsg = "{flag: true, info: {retmsg: {user_name: \""+user.getUser_name()+"\"}";
+			retMsg = user.getUser_name();
 		} else {
-			retMsg = "{flag: false}";
+			retMsg = "’À∫≈≤ª¥Ê‘⁄£°";
 		}
 		finish();
 	}
