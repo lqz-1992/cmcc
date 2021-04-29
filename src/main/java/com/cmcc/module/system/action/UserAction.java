@@ -7,6 +7,7 @@ import com.cmcc.module.system.dao.UserDaoImpl;
 public class UserAction extends BaseAction {
     private static final long serialVersionUID = -2724484153902555164L;
 
+    // µÇÂ¼Èë¿Ú
 	public void login() {
 		String userid = request.getParameter("userid");
 		String password = request.getParameter("password");
