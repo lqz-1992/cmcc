@@ -9,7 +9,7 @@ import com.cmcc.common.dbcp.PoolFactory;
 import com.cmcc.common.dbcp.PoolManager;
 import com.cmcc.module.system.bean.UserBean;
 
-public class TestJDBC {
+public class UserDaoImpl {
 	
     public UserBean getUser(String userId, String password) {
 		UserBean user = null;
