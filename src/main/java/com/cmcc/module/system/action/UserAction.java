@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts2.ServletActionContext;
 
+import com.cmcc.module.system.bean.UserBean;
+import com.cmcc.module.system.dao.TestJDBC;
+
 public class UserAction {
 
 	public String retMsg;
@@ -22,11 +25,16 @@ public class UserAction {
 	public void login() throws IOException {
 		String userid = request.getParameter("userid");
 		String password = request.getParameter("password");
+		
+		UserBean user = null;
+		if (userid != null && userid != "" && password != null && password != "") {
+			user = new TestJDBC().getUser(userid, password);
+		}
 
-		if ("admin".equalsIgnoreCase(userid) && "admin".equalsIgnoreCase(password)) {
-			retMsg = "success";
+		if (user != null) {
+			retMsg = "{\"flag\": \"success\", \"info\": {\"user_name\": \""+user.getUser_name()+"\"}}";
 		} else {
-			retMsg = "fail";
+			retMsg = "{\"flag\": \"fail\"}";
 		}
 		finish();
 	}
